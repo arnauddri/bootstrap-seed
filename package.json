@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "jade": "jade src/**.jade --out dist -P -w",
     "stylus": "stylus src/**.styl --out dist -w",
-    "watch": "npm run jade & npm run stylus"
+    "js": "watchify ./src/main.js -o dist/main.js",
+    "watch": "npm run jade & npm run stylus & npm run js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,9 @@
   },
   "homepage": "https://github.com/arnauddri/bootstrap-seed",
   "devDependencies": {
+    "browserify": "^13.0.0",
     "jade": "^1.9.2",
-    "watch": "^0.14.0",
-    "stylus": "^0.50.0"
+    "stylus": "^0.50.0",
+    "watch": "^0.14.0"
   }
 }
